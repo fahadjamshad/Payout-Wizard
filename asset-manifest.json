@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "./static/css/main.1ff71a7c.css",
-    "main.js": "./static/js/main.e5ee44ff.js",
-    "index.html": "./index.html",
-    "main.1ff71a7c.css.map": "./static/css/main.1ff71a7c.css.map",
-    "main.e5ee44ff.js.map": "./static/js/main.e5ee44ff.js.map"
+    "main.css": "/Payout-Wizard/static/css/main.1ff71a7c.css",
+    "main.js": "/Payout-Wizard/static/js/main.e5ee44ff.js",
+    "index.html": "/Payout-Wizard/index.html",
+    "main.1ff71a7c.css.map": "/Payout-Wizard/static/css/main.1ff71a7c.css.map",
+    "main.e5ee44ff.js.map": "/Payout-Wizard/static/js/main.e5ee44ff.js.map"
   },
   "entrypoints": [
     "static/css/main.1ff71a7c.css",
