@@ -87,7 +87,7 @@ const SuccessStep: React.FC<SuccessStepProps> = ({ payoutId }) => {
 
         <button
           type="button"
-          className="btn btn-outline"
+          className="btn btn-create-another"
           onClick={handleNewPayout}
           aria-label="Create another payout"
         >
