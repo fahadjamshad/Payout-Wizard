@@ -90,7 +90,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
       </p>
 
       {/* Basic Information */}
-      <div className="review-section">
+      <div className="review-section basic-info">
         <h3 className="review-section-title">
           <span role="img" aria-label="Information">
             ℹ️
@@ -107,7 +107,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
 
         <div className="review-item">
           <span className="review-label">Amount:</span>
-          <span className="review-value">
+          <span className="review-value amount">
             {data.currency}{" "}
             {data.amount?.toLocaleString("en-US", {
               minimumFractionDigits: 2,
@@ -123,7 +123,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
       </div>
 
       {/* Recipient Information */}
-      <div className="review-section">
+      <div className="review-section recipient-info">
         <h3 className="review-section-title">
           <span role="img" aria-label="Person">
             👤
@@ -147,12 +147,12 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
 
         <div className="review-item">
           <span className="review-label">Email:</span>
-          <span className="review-value">{data.email}</span>
+          <span className="review-value email">{data.email}</span>
         </div>
 
         <div className="review-item">
           <span className="review-label">Phone:</span>
-          <span className="review-value">{data.phone}</span>
+          <span className="review-value phone">{data.phone}</span>
         </div>
 
         {data.address && (
@@ -170,7 +170,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
       </div>
 
       {/* Payment Details */}
-      <div className="review-section">
+      <div className="review-section payment-info">
         <h3 className="review-section-title">
           <span role="img" aria-label="Payment">
             💳
@@ -254,7 +254,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
       </div>
 
       {/* Schedule & Tax */}
-      <div className="review-section">
+      <div className="review-section schedule-info">
         <h3 className="review-section-title">
           <span role="img" aria-label="Calendar">
             📅
@@ -298,11 +298,8 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
 
       {/* Payment Summary */}
       {netAmount && (
-        <div
-          className="review-section"
-          style={{ background: "#f0f9ff", border: "2px solid #3b82f6" }}
-        >
-          <h3 className="review-section-title" style={{ color: "#1e40af" }}>
+        <div className="review-section payment-summary">
+          <h3 className="review-section-title">
             <span role="img" aria-label="Money">
               💰
             </span>
@@ -311,7 +308,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
 
           <div className="review-item">
             <span className="review-label">Gross Amount:</span>
-            <span className="review-value" style={{ fontWeight: "600" }}>
+            <span className="review-value gross-amount">
               {formatCurrency(netAmount.gross, netAmount.currency)}
             </span>
           </div>
@@ -320,7 +317,7 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
             <>
               <div className="review-item">
                 <span className="review-label">Tax Withholding:</span>
-                <span className="review-value" style={{ color: "#dc2626" }}>
+                <span className="review-value tax-amount">
                   -
                   {formatCurrency(netAmount.taxWithholding, netAmount.currency)}
                 </span>
@@ -335,20 +332,10 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
               />
 
               <div className="review-item">
-                <span
-                  className="review-label"
-                  style={{ fontSize: "1.125rem", fontWeight: "700" }}
-                >
+                <span className="review-label net-amount-label">
                   Net Amount:
                 </span>
-                <span
-                  className="review-value"
-                  style={{
-                    fontSize: "1.125rem",
-                    fontWeight: "700",
-                    color: "#1e40af",
-                  }}
-                >
+                <span className="review-value net-amount">
                   {formatCurrency(netAmount.net, netAmount.currency)}
                 </span>
               </div>
@@ -357,20 +344,10 @@ const ReviewStep: React.FC<ReviewStepProps> = ({ data }) => {
 
           {data.taxExempt && (
             <div className="review-item">
-              <span
-                className="review-label"
-                style={{ fontSize: "1.125rem", fontWeight: "700" }}
-              >
+              <span className="review-label net-amount-label">
                 Net Amount:
               </span>
-              <span
-                className="review-value"
-                style={{
-                  fontSize: "1.125rem",
-                  fontWeight: "700",
-                  color: "#1e40af",
-                }}
-              >
+              <span className="review-value net-amount">
                 {formatCurrency(netAmount.net, netAmount.currency)}
               </span>
             </div>

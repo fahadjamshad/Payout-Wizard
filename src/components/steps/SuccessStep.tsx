@@ -31,91 +31,51 @@ const SuccessStep: React.FC<SuccessStepProps> = ({ payoutId }) => {
         )}
       </p>
 
-      <div
-        style={{
-          background: "#f8fafc",
-          border: "1px solid #e2e8f0",
-          borderRadius: "8px",
-          padding: "1.5rem",
-          marginBottom: "2rem",
-          textAlign: "left",
-        }}
-      >
-        <h3
-          style={{
-            margin: "0 0 1rem 0",
-            fontSize: "1.125rem",
-            fontWeight: "600",
-          }}
-        >
+      <div className="success-info-box">
+        <h3>
+          <span role="img" aria-label="Next steps">
+            📋
+          </span>
           What happens next?
         </h3>
 
-        <ul style={{ margin: 0, paddingLeft: "1.5rem", color: "#6b7280" }}>
-          <li style={{ marginBottom: "0.5rem" }}>
-            You'll receive a confirmation email with payout details
-          </li>
-          <li style={{ marginBottom: "0.5rem" }}>
-            The recipient will be notified via email and/or SMS
-          </li>
-          <li style={{ marginBottom: "0.5rem" }}>
-            Processing time varies by payment method (see details below)
-          </li>
-          <li style={{ marginBottom: "0.5rem" }}>
-            You can track the payout status in your dashboard
-          </li>
+        <ul>
+          <li>You'll receive a confirmation email with payout details</li>
+          <li>The recipient will be notified via email and/or SMS</li>
+          <li>Processing time varies by payment method (see details below)</li>
+          <li>You can track the payout status in your dashboard</li>
         </ul>
       </div>
 
-      <div
-        style={{
-          background: "#f0f9ff",
-          border: "1px solid #bae6fd",
-          borderRadius: "8px",
-          padding: "1.5rem",
-          marginBottom: "2rem",
-          textAlign: "left",
-        }}
-      >
-        <h3
-          style={{
-            margin: "0 0 1rem 0",
-            fontSize: "1.125rem",
-            fontWeight: "600",
-            color: "#1e40af",
-          }}
-        >
+      <div className="success-processing-box">
+        <h3>
+          <span role="img" aria-label="Processing times">
+            ⏱️
+          </span>
           Processing Times
         </h3>
 
-        <div style={{ display: "grid", gap: "0.5rem", color: "#1e40af" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="success-processing-grid">
+          <div className="success-processing-item">
             <span>Bank Transfer:</span>
             <span>1-3 business days</span>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="success-processing-item">
             <span>PayPal:</span>
             <span>Instant to 1 business day</span>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="success-processing-item">
             <span>Cryptocurrency:</span>
             <span>10-30 minutes</span>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="success-processing-item">
             <span>Check (Mail):</span>
             <span>5-7 business days</span>
           </div>
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          gap: "1rem",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
+      <div className="success-actions">
         <button
           type="button"
           className="btn btn-primary"
@@ -135,17 +95,8 @@ const SuccessStep: React.FC<SuccessStepProps> = ({ payoutId }) => {
         </button>
       </div>
 
-      <div
-        style={{
-          marginTop: "2rem",
-          padding: "1rem",
-          background: "#f0fdf4",
-          border: "1px solid #bbf7d0",
-          borderRadius: "8px",
-          textAlign: "left",
-        }}
-      >
-        <p style={{ margin: 0, color: "#166534", fontSize: "0.875rem" }}>
+      <div className="success-tip-box">
+        <p>
           <strong>💡 Tip:</strong> Save this payout ID for your records. You can
           use it to track the payout status or contact support if needed.
         </p>

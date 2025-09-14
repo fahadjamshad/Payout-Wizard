@@ -135,15 +135,7 @@ const BasicInformationStep: React.FC<BasicInformationStepProps> = ({
 
       {data.amount && data.currency && (
         <div className="form-group">
-          <div
-            style={{
-              padding: "1rem",
-              background: "#f0f9ff",
-              border: "1px solid #bae6fd",
-              borderRadius: "8px",
-              textAlign: "center",
-            }}
-          >
+          <div className="total-amount-display">
             <strong>
               Total Amount: {data.currency}{" "}
               {data.amount.toLocaleString("en-US", {
