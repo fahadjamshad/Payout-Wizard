@@ -76,9 +76,7 @@ const RecipientInformationStep: React.FC<RecipientInformationStepProps> = ({
         </div>
       </div>
 
-      <div
-        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}
-      >
+      <div className="form-grid-2">
         <div className="form-group">
           <label htmlFor="firstName" className="form-label">
             First Name *
@@ -210,13 +208,7 @@ const RecipientInformationStep: React.FC<RecipientInformationStepProps> = ({
           )}
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            gap: "1rem",
-          }}
-        >
+        <div className="address-grid">
           <div className="form-group">
             <label htmlFor="city" className="form-label">
               City *

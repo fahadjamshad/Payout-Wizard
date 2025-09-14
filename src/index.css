@@ -442,6 +442,41 @@ body {
     text-align: left;
     max-width: 100%;
   }
+
+  /* Form grid improvements for mobile */
+  .form-grid-2,
+  .form-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Inline form grids for mobile */
+  .form-inline-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Address form improvements */
+  .address-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Payment method fields */
+  .payment-method-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Bank details grid */
+  .bank-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -462,6 +497,92 @@ body {
   .btn {
     padding: 0.625rem 1rem;
     font-size: 0.875rem;
+  }
+
+  /* Extra small screens */
+  .wizard-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .wizard-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+  }
+
+  .step-description {
+    font-size: 0.875rem;
+  }
+
+  /* Compact form spacing */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  /* Smaller wizard steps */
+  .wizard-step {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .wizard-step-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1024px) {
+  .wizard {
+    max-width: 900px;
+  }
+
+  .wizard-content {
+    padding: 2.5rem;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1280px) {
+  .wizard {
+    max-width: 1000px;
+  }
+
+  .wizard-content {
+    padding: 3rem;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .wizard-header {
+    padding: 1rem;
+  }
+
+  .wizard-content {
+    padding: 1rem;
+  }
+
+  .wizard-steps {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wizard-step {
+    flex: 1;
+    min-width: 120px;
   }
 }
 
@@ -540,6 +661,27 @@ legend {
 .form-grid-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Address grid - responsive */
+.address-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+/* Bank details grid - responsive */
+.bank-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Payment method grid - responsive */
+.payment-method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -636,5 +778,67 @@ legend {
 
   .spinner {
     animation: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    min-height: 48px;
+    padding: 0.875rem;
+  }
+
+  .wizard-step {
+    min-height: 48px;
+    padding: 0.875rem 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+
+  .wizard {
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+
+  .wizard-header {
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    background: #334155;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: #3b82f6;
+    background: #334155;
+  }
+
+  .review-section {
+    background: #334155;
+    border-color: #475569;
+  }
+
+  .app-header {
+    background: #1e293b;
+    border-color: #475569;
   }
 }
