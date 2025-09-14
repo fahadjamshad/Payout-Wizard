@@ -1,0 +1,25 @@
+/* App-specific styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem 0;
+}

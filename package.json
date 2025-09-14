@@ -1,0 +1,51 @@
+{
+  "name": "payout-wizard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A comprehensive, accessible React + TypeScript payout creation wizard with multi-step interface, validation, and accessibility features.",
+  "keywords": [
+    "react",
+    "typescript",
+    "payout",
+    "wizard",
+    "accessibility",
+    "form",
+    "validation"
+  ],
+  "author": "Your Name",
+  "homepage": ".",
+  "dependencies": {
+    "@types/node": "^16.18.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.0",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:prod": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "eject": "react-scripts eject",
+    "preview": "serve -s build -l 3000"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
